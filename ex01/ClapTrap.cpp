@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:03:02 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 20:02:39 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 21:27:30 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap( void ) {
     
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << GREEN "ClapTrap: Default constructor called" END << std::endl;
 
     _name = "(null)";
     _hitPoints = 10;
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap( void ) {
 
 ClapTrap::ClapTrap( std::string name ) : _name(name){
     
-    std::cout << "Constructor [" << _name << "] called" << std::endl;
+    std::cout << GREEN "ClapTrap: Constructor [" << _name << "] called" END << std::endl;
 
     _hitPoints = 10;
     _energyPoints = 10;
@@ -37,18 +37,18 @@ ClapTrap::ClapTrap( std::string name ) : _name(name){
 
 ClapTrap::~ClapTrap() {
 
-    std::cout << "\nDestructor called" << std::endl;
+    std::cout << RED "\nClapTrap: Destructor called" END << std::endl;
 
     return ;
 }
 
 void    ClapTrap::attack( const std::string& target ) {
 
-    std::cout << "\nClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamages << " points of damage!" << std::endl;
+    std::cout << CYAN "\nClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamages << " points of damage!" END << std::endl;
 
-    std::cout << this->_name << " : Current hitpoints: " << this->_hitPoints << std::endl;
+    std::cout << CYAN << this->_name << " : Current hitpoints: " << this->_hitPoints <<  END << std::endl;
     this->_energyPoints -= 1;
-    std::cout << this->_name << " : Current energypoints: " << this->_energyPoints << std::endl;
+    std::cout << CYAN << this->_name << " : Current energypoints: " << this->_energyPoints << END << std::endl;
     return ;
 }
 
@@ -56,11 +56,11 @@ void    ClapTrap::takeDamage( unsigned int amount ) {
 
     if (this->_hitPoints > 0 && this->_energyPoints > 0)
     {
-        std::cout << "\nClapTrap " << this->_name << " took " << amount << " damages!" << std::endl;
+        std::cout << CYAN "\nClapTrap " << this->_name << " took " << amount << " damages!" END << std::endl;
         this->_hitPoints -= amount;
-        std::cout << this->_name << " : Current hitpoints: " << this->_hitPoints << std::endl;
+        std::cout << CYAN << this->_name << " : Current hitpoints: " << this->_hitPoints << END << std::endl;
         this->_energyPoints -= 1;
-        std::cout << this->_name << " : Current energypoints: " << this->_energyPoints << std::endl;
+        std::cout << CYAN << this->_name << " : Current energypoints: " << this->_energyPoints << END << std::endl;
     }
     
     return ;
@@ -70,14 +70,14 @@ void    ClapTrap::beRepaired( unsigned int amount ) {
 
     if (this->_hitPoints > 0 && this->_energyPoints > 0)
     {
-        std::cout << "\nClapTrap " << this->_name << " got repaired with " << amount << " extra hitpoints!" << std::endl;
+        std::cout << CYAN "\nClapTrap " << this->_name << " got repaired with " << amount << " extra hitpoints!" END << std::endl;
         this->_hitPoints += amount;
-        std::cout << this->_name << " : Current hitpoints: " << this->_hitPoints << std::endl;
+        std::cout << CYAN << this->_name << " : Current hitpoints: " << this->_hitPoints << END << std::endl;
         this->_energyPoints -= 1;
-        std::cout << this->_name << " : Current energypoints: " << this->_energyPoints << std::endl;
+        std::cout << CYAN << this->_name << " : Current energypoints: " << this->_energyPoints << END << std::endl;
     }
     else if (this->_hitPoints > 0 && this->_energyPoints == 0)
-        std::cout << "\n" << this->_name << " : error: not enought energy points to beRepaired()." << std::endl;
+        std::cout << CYAN "\n" << this->_name << " : error: not enought energy points to beRepaired()." END << std::endl;
     
     return ;
 }

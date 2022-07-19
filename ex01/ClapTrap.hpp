@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:02:55 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 20:55:08 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 21:22:16 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,13 @@
 # define CLAPTRAP_HPP
 
 #include <iostream>
+
+#define RED "\033[1;31m"
+#define GREEN "\033[1;32m"
+
+#define CYAN "\033[1;36m"
+
+#define END "\033[0m"
 
 class ClapTrap {
     
