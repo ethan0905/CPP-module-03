@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:02:55 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 19:27:59 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 20:55:08 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class ClapTrap {
         void    takeDamage( unsigned int amount );
         void    beRepaired( unsigned int amount );
         
-    private:
+    protected:
 
         std::string _name;
         int _hitPoints;

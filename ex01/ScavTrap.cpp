@@ -6,53 +6,53 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 20:13:21 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 20:21:59 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 20:55:25 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
-ScavTrap::ScavTrap( void ) {
+ScavTrap::ScavTrap( void ) : ClapTrap() {
     
     std::cout << "ScavTrap default constructor called" << std::endl;
 
-    _name = "(null)";
-    _hitPoints = 100;
-    _energyPoints = 50;
-    _attackDamages = 20;
+    this->_name = "(null)";
+    this->_hitPoints = 100;
+    this->_energyPoints = 50;
+    this->_attackDamages = 20;
 
     return ;
 }
 
-ScavTrap::ScavTrap( std::string name ) : _name(name){
+ScavTrap::ScavTrap( std::string name ) : ClapTrap( name ) {
     
-    std::cout << "ScavTrap constructor [" << _name << "] called" << std::endl;
+    std::cout << "ScavTrap constructor [" << this->_name << "] called" << std::endl;
 
-    _hitPoints = 100;
-    _energyPoints = 50;
-    _attackDamages = 20;
+    this->_hitPoints = 100;
+    this->_energyPoints = 50;
+    this->_attackDamages = 20;
 
     return ;
 }
 
 ScavTrap::~ScavTrap() {
 
-    std::cout << "\nDestructor called" << std::endl;
+    std::cout << "\nScavTrap destructor called" << std::endl;
 
     return ;
 }
 
 void    ScavTrap::attack( const std::string& target ) {
 
-    std::cout << "\nScavTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamages << " points of damage!" << std::endl;
+    std::cout << "\nScavTrap " << this->ClapTrap::_name << " attacks " << target << ", causing " << this->ClapTrap::_attackDamages << " points of damage!" << std::endl;
 
     return ;
 }
 
 void    ScavTrap::guardGate( void ) {
 
-    std::cout << "ScavTrap entered Gate Keeper mode." << std::endl;
+    std::cout << "ScavTrap entered Gate Keeper mode. 🛡" << std::endl;
     
     return ;
 }
-
