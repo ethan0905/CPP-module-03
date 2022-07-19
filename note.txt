@@ -1,0 +1,2 @@
+ex01 : interaction with ClapTrap ?
+	-> need to add some tests
