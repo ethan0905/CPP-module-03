@@ -1,2 +1,2 @@
-ex01 : interaction with ClapTrap ?
+ex01 : interaction with ClapTrap ? => operator= overload ?
 	-> need to add some tests
