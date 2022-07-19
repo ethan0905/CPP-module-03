@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:03:02 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 19:50:29 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 20:02:39 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void    ClapTrap::attack( const std::string& target ) {
     std::cout << "\nClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamages << " points of damage!" << std::endl;
 
     std::cout << this->_name << " : Current hitpoints: " << this->_hitPoints << std::endl;
+    this->_energyPoints -= 1;
     std::cout << this->_name << " : Current energypoints: " << this->_energyPoints << std::endl;
     return ;
 }
@@ -75,6 +76,8 @@ void    ClapTrap::beRepaired( unsigned int amount ) {
         this->_energyPoints -= 1;
         std::cout << this->_name << " : Current energypoints: " << this->_energyPoints << std::endl;
     }
+    else if (this->_hitPoints > 0 && this->_energyPoints == 0)
+        std::cout << "\n" << this->_name << " : error: not enought energy points to beRepaired()." << std::endl;
     
     return ;
 }

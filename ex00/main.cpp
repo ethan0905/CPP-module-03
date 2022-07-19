@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:36 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 19:50:43 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 19:54:47 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,15 @@ int	main(void)
     ethan.takeDamage(2);
     ethan.beRepaired(5);
     ethan.beRepaired(10);
+    ethan.takeDamage(10);
     ethan.beRepaired(5);
+    ethan.beRepaired(5);
+    ethan.beRepaired(5);
+    ethan.beRepaired(5);
+    ethan.beRepaired(5);
+    ethan.beRepaired(5);
+    ethan.beRepaired(5);
+
 
 	return (0);
 }
