@@ -1,44 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 17:19:36 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 22:17:31 by esafar           ###   ########.fr       */
+/*   Created: 2022/07/19 21:58:10 by esafar            #+#    #+#             */
+/*   Updated: 2022/07/19 22:20:31 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef DIAMONDTRAP_HPP
+# define DIAMONDTRAP_HPP
+
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
-#include "DiamondTrap.hpp"
 
-int	main(void)
-{
-    ClapTrap ethan("ethan");
+#define WHITE "\033[1;37m"
 
-    ethan.attack("bobby");
-    ethan.takeDamage(2);
-    ethan.beRepaired(5);
-
-    ScavTrap alex("alex");
-
-    alex.attack("jhon");
-    alex.takeDamage(10);
-    alex.guardGate();
-
-    FragTrap manu("manu");
+class DiamondTrap : public ScavTrap, public FragTrap{
     
-    manu.attack("patrick");
-    manu.highFivesGuys();
+    public:
     
-    DiamondTrap dim("dim");
+        DiamondTrap( void );
+        DiamondTrap( std::string name );
+        ~DiamondTrap( void );
+        
+        void    attack( std::string const &target );
+        void    whoAmI( void );
+        
+    private:
 
-    dim.attack("manu");
-    dim.whoAmI();
+        std::string _name;
+};
 
-	return (0);
-}
+#endif

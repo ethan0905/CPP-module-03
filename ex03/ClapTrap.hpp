@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:02:55 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 21:44:31 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 22:15:46 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@
 
 #define CYAN "\033[1;36m"
 
-//for fragtrap and diamondtrap
-#define WHITE "\033[1;37m"
-
 class ClapTrap {
     
     public:
@@ -32,7 +29,7 @@ class ClapTrap {
         ClapTrap( std::string name );
         ~ClapTrap( void );
         
-        void    attack( const std::string& target );
+        void    attack( const std::string &target );
         void    takeDamage( unsigned int amount );
         void    beRepaired( unsigned int amount );
         
