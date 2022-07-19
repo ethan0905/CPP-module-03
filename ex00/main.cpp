@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:36 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 18:12:10 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 19:38:01 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 
 int	main(void)
 {
-    std::string name = "ethan";
-    ClapTrap a(name);
+    ClapTrap ethan("ethan");
 
-	// return (0);
+    ethan.attack("bobby");
+    ethan.takeDamage(7);
+    ethan.beRepaired(5);
+    ethan.beRepaired(5);
+    ethan.beRepaired(5);
+
+	return (0);
 }
