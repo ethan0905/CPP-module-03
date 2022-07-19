@@ -1,38 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/13 17:19:36 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 21:48:56 by esafar           ###   ########.fr       */
+/*   Created: 2022/07/19 21:42:29 by esafar            #+#    #+#             */
+/*   Updated: 2022/07/19 21:44:30 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
+
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
-#include "FragTrap.hpp"
 
-int	main(void)
-{
-    ClapTrap ethan("ethan");
+#define MAGENTA "\033[1;35m"
 
-    ethan.attack("bobby");
-    ethan.takeDamage(2);
-    ethan.beRepaired(5);
-
-    ScavTrap alex("alex");
-
-    alex.attack("jhon");
-    alex.takeDamage(10);
-    alex.guardGate();
-
-    FragTrap manu("manu");
+class FragTrap : public ClapTrap{
     
-    manu.attack("patrick");
-    manu.highFivesGuys();
+    public:
     
-	return (0);
-}
+        FragTrap( void );
+        FragTrap( std::string name );
+        ~FragTrap( void );
+        
+        void highFivesGuys(void);
+        
+    private:
+};
+
+#endif
