@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:03:02 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 19:46:22 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/19 19:50:29 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap( void ) {
 
 ClapTrap::ClapTrap( std::string name ) : _name(name){
     
-    std::cout << _name << " : Constructor called" << std::endl;
+    std::cout << "Constructor [" << _name << "] called" << std::endl;
 
     _hitPoints = 10;
     _energyPoints = 10;
@@ -37,7 +37,7 @@ ClapTrap::ClapTrap( std::string name ) : _name(name){
 
 ClapTrap::~ClapTrap() {
 
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "\nDestructor called" << std::endl;
 
     return ;
 }
