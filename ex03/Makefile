@@ -6,13 +6,13 @@
 #    By: esafar <esafar@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/27 14:59:45 by esafar            #+#    #+#              #
-#    Updated: 2022/07/19 21:41:59 by esafar           ###   ########.fr        #
+#    Updated: 2022/07/20 13:44:02 by esafar           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = FragTrap
+NAME = DiamondTrap
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 GCC = c++
 FLAGS = -g -Wextra -Wall -Werror -std=c++98 

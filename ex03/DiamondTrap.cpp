@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 21:58:07 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 22:20:29 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/20 14:25:52 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 DiamondTrap::DiamondTrap( void ) : ClapTrap("default_clap_name"), ScavTrap(), FragTrap() {
     
-    std::cout << GREEN "DiamondTrap default constructor called" END<< std::endl << std::endl;
+    std::cout << WHITE "DiamondTrap:: " << GREEN "Default constructor called" END<< std::endl << std::endl;
 
     this->_name = "(null)";
     this->FragTrap::_hitPoints = 100;
@@ -24,32 +24,39 @@ DiamondTrap::DiamondTrap( void ) : ClapTrap("default_clap_name"), ScavTrap(), Fr
     return ;
 }
 
-DiamondTrap::DiamondTrap( std::string name ) : ClapTrap( name + "_clap_name" ), FragTrap( name ) {
+DiamondTrap::DiamondTrap( std::string name ) : ClapTrap() {
     
-    std::cout << GREEN "DiamondTrap constructor [" << this->_name << "] called" END << std::endl << std::endl;
+    this->ClapTrap::_name = name + "_clap_name";
+    std::cout << WHITE "DiamondTrap:: " <<  GREEN "Constructor [" << this->ClapTrap::_name << "] called" END << std::endl << std::endl;
 
     this->FragTrap::_hitPoints = 100;
     this->ScavTrap::_energyPoints = 100;
     this->FragTrap::_attackDamages = 30;
+
+    std::cout << LIGHTDARK << this->ClapTrap::_name << " : " WHITE "Current hitpoints: " << this->_hitPoints << std::endl;
+    std::cout << LIGHTDARK << this->ClapTrap::_name << " : " WHITE "Current energypoints: " << this->_energyPoints << END << std::endl << std::endl;
 
     return ;
 }
 
 DiamondTrap::~DiamondTrap() {
 
-    std::cout << RED "DiamondTrap destructor called" END << std::endl << std::endl;
+    std::cout << WHITE "DiamondTrap:: " <<  RED "Destructor called" END << std::endl << std::endl;
 
     return ;
 }
 
 void    DiamondTrap::attack( std::string const &target ) {
 
+    std::cout << WHITE "DiamondTrap:: " END;
     this->ScavTrap::attack(target);
     return ;
 }
 
 
 void    DiamondTrap::whoAmI( void ) {
+
+    std::cout << WHITE "DiamondTrap:: Who Am I ? That's a good question.." END << std::endl << std::endl;
 
     return ;
 }
