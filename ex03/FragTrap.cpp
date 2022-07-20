@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 21:42:27 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/20 14:24:26 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/20 14:42:06 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ FragTrap::FragTrap( void ) : ClapTrap() {
 
 FragTrap::FragTrap( std::string name ) : ClapTrap( name ) {
     
-    std::cout << MAGENTA "FragTrap:: " << GREEN "Constructor [" << this->_name << "] called" END << std::endl << std::endl;
+    std::cout << MAGENTA "FragTrap:: " << GREEN "Constructor " LIGHTDARK "[" << this->_name << "]" GREEN " called" END << std::endl << std::endl;
 
     this->_hitPoints = 100;
     this->_energyPoints = 100;

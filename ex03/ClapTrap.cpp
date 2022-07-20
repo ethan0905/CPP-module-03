@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:03:02 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/20 14:18:16 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/20 14:33:18 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap( void ) {
 
 ClapTrap::ClapTrap( std::string name ) : _name(name){
     
-    std::cout << CYAN "ClapTrap:: " << GREEN "Constructor [" << _name << "] called" END << std::endl << std::endl;
+    std::cout << CYAN "ClapTrap:: " << GREEN "Constructor " LIGHTDARK "[" << _name << "]" GREEN " called" END << std::endl << std::endl;
 
     _hitPoints = 10;
     _energyPoints = 10;
@@ -44,7 +44,7 @@ ClapTrap::~ClapTrap() {
 
 void    ClapTrap::attack( const std::string& target ) {
 
-    std::cout << CYAN "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamages << " points of damage!" END << std::endl;
+    std::cout << CYAN "ClapTrap " LIGHTDARK << this->_name << CYAN " attacks " LIGHTDARK << target << CYAN ", causing " << this->_attackDamages << " points of damage!" END << std::endl;
 
     std::cout << LIGHTDARK << this->_name << " : " CYAN "Current hitpoints: " << this->_hitPoints <<  END << std::endl;
     this->_energyPoints -= 1;
@@ -56,7 +56,7 @@ void    ClapTrap::takeDamage( unsigned int amount ) {
 
     if (this->_hitPoints > 0 && this->_energyPoints > 0)
     {
-        std::cout << CYAN "ClapTrap " << this->_name << " took " << amount << " damages!" END << std::endl;
+        std::cout << CYAN "ClapTrap " LIGHTDARK << this->_name << CYAN " took " LIGHTDARK << amount << CYAN " damages!" END << std::endl;
         this->_hitPoints -= amount;
         std::cout << LIGHTDARK << this->_name << " : " CYAN "Current hitpoints: " << this->_hitPoints << END << std::endl;
         this->_energyPoints -= 1;
@@ -70,7 +70,7 @@ void    ClapTrap::beRepaired( unsigned int amount ) {
 
     if (this->_hitPoints > 0 && this->_energyPoints > 0)
     {
-        std::cout << CYAN "ClapTrap " << this->_name << " got repaired with " << amount << " extra hitpoints!" END << std::endl;
+        std::cout << CYAN "ClapTrap " LIGHTDARK << this->_name << CYAN " got repaired with " LIGHTDARK << amount << CYAN " extra hitpoints!" END << std::endl;
         this->_hitPoints += amount;
         std::cout << LIGHTDARK << this->_name << " : " CYAN "Current hitpoints: " << this->_hitPoints << END << std::endl;
         this->_energyPoints -= 1;

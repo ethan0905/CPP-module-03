@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 20:13:21 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/20 14:07:48 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/20 14:41:07 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ScavTrap::ScavTrap( void ) : ClapTrap() {
 
 ScavTrap::ScavTrap( std::string name ) : ClapTrap( name ) {
     
-    std::cout << YELLOW "ScavTrap:: " << GREEN "Constructor [" << this->_name << "] called" END << std::endl << std::endl;
+    std::cout << YELLOW "ScavTrap:: " << GREEN "Constructor " LIGHTDARK "[" << this->_name << "]" GREEN " called" END << std::endl << std::endl;
 
     this->_hitPoints = 100;
     this->_energyPoints = 50;
@@ -44,7 +44,7 @@ ScavTrap::~ScavTrap() {
 
 void    ScavTrap::attack( const std::string& target ) {
 
-    std::cout << YELLOW "ScavTrap " << this->ClapTrap::_name << " attacks " << target << ", causing " << this->ClapTrap::_attackDamages << " points of damage!" END<< std::endl << std::endl;
+    std::cout << YELLOW "ScavTrap " LIGHTDARK << this->ClapTrap::_name << YELLOW " attacks " LIGHTDARK << target << YELLOW ", causing " LIGHTDARK << this->ClapTrap::_attackDamages << YELLOW " points of damage!" END<< std::endl << std::endl;
 
     return ;
 }
