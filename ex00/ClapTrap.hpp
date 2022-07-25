@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:02:55 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/25 16:34:01 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/25 16:48:04 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ class ClapTrap {
         void    takeDamage( unsigned int amount );
         void    beRepaired( unsigned int amount );
         
+        ClapTrap   &operator=( ClapTrap const & rhs );
+
     private:
 
         std::string _name;

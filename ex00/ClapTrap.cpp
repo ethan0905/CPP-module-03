@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:03:02 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/25 16:34:57 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/25 16:55:27 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,15 @@ void    ClapTrap::beRepaired( unsigned int amount ) {
         std::cout << "\n" << this->_name << " : error: not enought energy points to beRepaired()." << std::endl;
     
     return ;
+}
+
+ClapTrap   &ClapTrap::operator=( ClapTrap const & rhs ) {
+    
+    this->_attackDamages = rhs._attackDamages ;
+    this->_energyPoints = rhs._energyPoints;
+    this->_hitPoints = rhs._hitPoints;
+    this->_name = rhs._name;
+    
+    return (*this);
 }
 
