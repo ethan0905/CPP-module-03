@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 21:42:29 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 22:20:35 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/25 17:25:18 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,13 @@ class FragTrap : virtual public ClapTrap{
     
         FragTrap( void );
         FragTrap( std::string name );
+        FragTrap( FragTrap const & rhs );
         ~FragTrap( void );
         
         void highFivesGuys(void);
-        
+
+        FragTrap   &operator=( FragTrap const & rhs );
+
     private:
 };
 

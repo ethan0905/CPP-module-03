@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 20:13:21 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/20 14:41:07 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/25 17:37:47 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,14 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap( name ) {
     return ;
 }
 
+ScavTrap::ScavTrap( ScavTrap const & rhs ) {
+
+    std::cout << YELLOW "ScavTrap:: " << GREEN "Copy constructor called" END << std::endl << std::endl;
+    *this = rhs;
+
+    return ;
+}
+
 ScavTrap::~ScavTrap() {
 
     std::cout << YELLOW "ScavTrap:: " << RED "Destructor called" END << std::endl << std::endl;
@@ -54,4 +62,14 @@ void    ScavTrap::guardGate( void ) {
     std::cout << YELLOW "ScavTrap entered Gate Keeper mode. 🛡" END << std::endl << std::endl;
     
     return ;
+}
+
+ScavTrap   &ScavTrap::operator=( ScavTrap const & rhs ) {
+
+    this->ScavTrap::_attackDamages = rhs._attackDamages ;
+    this->ScavTrap::_energyPoints = rhs._energyPoints;
+    this->ScavTrap::_hitPoints = rhs._hitPoints;
+    this->ScavTrap::_name = rhs._name;
+    
+    return (*this);
 }

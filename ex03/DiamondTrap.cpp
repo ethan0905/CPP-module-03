@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 21:58:07 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/20 14:46:01 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/25 17:33:44 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,14 @@ DiamondTrap::DiamondTrap( std::string name ) : ClapTrap() {
     return ;
 }
 
+DiamondTrap::DiamondTrap( DiamondTrap const & rhs ) {
+
+    std::cout << WHITE "DiamondTrap:: " << GREEN "Copy constructor called" END << std::endl;
+    *this = rhs;
+    
+    return ;
+}
+
 DiamondTrap::~DiamondTrap() {
 
     std::cout << WHITE "DiamondTrap:: " <<  RED "Destructor called" END << std::endl << std::endl;
@@ -59,4 +67,14 @@ void    DiamondTrap::whoAmI( void ) {
     std::cout << WHITE "DiamondTrap:: Who Am I ? That's a good question.." END << std::endl << std::endl;
 
     return ;
+}
+
+DiamondTrap   &DiamondTrap::operator=( DiamondTrap const & rhs ) {
+    
+    this->FragTrap::_attackDamages = rhs._attackDamages ;
+    this->ScavTrap::_energyPoints = rhs._energyPoints;
+    this->FragTrap::_hitPoints = rhs._hitPoints;
+    this->ClapTrap::_name = rhs._name;
+    
+    return (*this);
 }
