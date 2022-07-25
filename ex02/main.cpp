@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 17:19:36 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 21:48:56 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/25 17:42:31 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ int	main(void)
     
     manu.attack("patrick");
     manu.highFivesGuys();
-    
+
 	return (0);
 }

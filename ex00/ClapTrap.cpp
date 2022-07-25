@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:03:02 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/25 16:55:27 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/25 17:20:47 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap( void ) {
 
 ClapTrap::ClapTrap( ClapTrap const & rhs ) {
     
-    std::cout << "Default constructor called" << std::endl;
+    std::cout << "Copy constructor called" << std::endl;
     *this = rhs;
     
     return ;
