@@ -6,7 +6,7 @@
 /*   By: esafar <esafar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 18:03:02 by esafar            #+#    #+#             */
-/*   Updated: 2022/07/19 20:02:39 by esafar           ###   ########.fr       */
+/*   Updated: 2022/07/25 16:34:57 by esafar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,14 @@ ClapTrap::ClapTrap( void ) {
     _energyPoints = 10;
     _attackDamages = 0;
 
+    return ;
+}
+
+ClapTrap::ClapTrap( ClapTrap const & rhs ) {
+    
+    std::cout << "Default constructor called" << std::endl;
+    *this = rhs;
+    
     return ;
 }
 
