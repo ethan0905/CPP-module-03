@@ -1,2 +1,5 @@
 ex01 : interaction with ClapTrap ? => operator= overload ?
 	-> need to add some tests
+
+recheck les fonctions attack, takeDamage => faire les check des hitpoints
+scavtrap::gardshield => faire enventuellement un booleen pour activer et desactiver (activer consomme 1 energypoint)
